@@ -1,32 +1,37 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
-    <title>Encriptador de texto</title>
-  </head>
-  <body>
-    <header class="cabecera-del-contenido"></header>
-
-    <a class="logo-alura" href="#inicio">logo</a>
-
-    <main class="contenido">
-      <h2>Ingrese el texto aquí</h2>
-      <section class="contenido__seccion">
-        <textarea id="inputText" placeholder="Introduce tu texto aquí..."></textarea>
-      </section>
-      <section class="contenido__seccion">
-        <textarea id="outputText" readonly></textarea>
-      </section>
-      <p>Solo letras minúsculas, sin acentos, puntos ni caracteres especiales</p>
-      <a id="encriptarBtn" href="#">Encriptar</a>
-      <a id="desencriptarBtn" href="#">Desencriptar</a>
-      <button id="copiarBtn">Copiar</button>
-    </main>
-
-    <footer class="final-de-la-paguina"></footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css">
+  <title>Encriptador de texto</title>
+</head>
+<body>
+  <header class="cabecera-del-contenido"></header>
+  
+  <img class="logo-alura" src="public/alura.svg" width="40px" height="40px" alt="logo">
+  
+  <main class="contenido">
     
-    <script src="main.js"></script>
-  </body>
+    <section class="contenido__seccion__encriptador">
+      <h2 class="contenido__seccion__texto">Introduce tu texto aquí...</h2>
+      <textarea id="inputText" placeholder="Introduce tu texto aquí..." required ></textarea>
+    </section>
+    
+    <section class="contenido__seccion__dessencriptadpor">
+      <img class="contenido__seccion__imagen" src="public/persona.png" alt="persona">
+      <textarea id="outputText" readonly></textarea>
+    </section>
+  </main>
+  <p>Solo letras minúsculas, sin acentos, puntos ni caracteres especiales</p>
+  <div class="div__botones">
+    <a id="encriptarBtn" href="#">Encriptar</a>
+    <a id="desencriptarBtn" href="#">Desencriptar</a>
+  </div>
+  <button id="copiarBtn">Copiar</button>
+  
+  <footer class="final-de-la-paguina"></footer>
+  
+  <script src="main.js"></script>
+</body>
 </html>
