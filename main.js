@@ -50,6 +50,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const outputText = document.getElementById('outputText');
     outputText.select();
     document.execCommand('copy');
+    document.getElementById('inputText').value = ''; // Clear the input textarea after copying
+    outputText.value = ''; // Clear the output textarea after copying
+    ajustarAltura(document.getElementById('inputText')); // Adjust height of input textarea
+    ajustarAltura(outputText); // Adjust height of output textarea
   });
 
   function ajustarAltura(textarea) {
