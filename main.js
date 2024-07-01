@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const outputText = document.getElementById('outputText');
     outputText.select();
     document.execCommand('copy');
-    document.getElementById('inputText').value = ''; // Clear the input textarea after copying
-    outputText.value = ''; // Clear the output textarea after copying
-    ajustarAltura(document.getElementById('inputText')); // Adjust height of input textarea
-    ajustarAltura(outputText); // Adjust height of output textarea
+    document.getElementById('inputText').value = ''; 
+    outputText.value = ''; 
+    ajustarAltura(document.getElementById('inputText')); 
+    ajustarAltura(outputText); 
   });
 
   function ajustarAltura(textarea) {
@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     textarea.style.height = `${textarea.scrollHeight}px`;
   }
 
-  // Ajustar altura inicialmente en caso de que haya algún texto
   const textareas = document.querySelectorAll('textarea');
   textareas.forEach(textarea => {
     ajustarAltura(textarea);
