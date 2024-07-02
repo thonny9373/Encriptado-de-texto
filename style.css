@@ -1,344 +1,332 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-:root {
-    --color-primario: #0A3871;
-    --color-secundario: #D8DFE8;
-    --color-terciario: #73879a;
-    --tipografia-font-family: "Inter", sans-serif;
+:root{
+    --textAreaColor: rgb(19,38,92);
+    --colorPlaceholder: darkblue;
+    --backgroundTexto: #E5E5E5;
+    --footerColor: rgb(19,38,92);
+    --backgroundMensajes: white;
+    --copiarDesencText: rgb(19,38,92);
+    --copiarDesencBackground: #D8DFE8;
+    --encriptarText: white;
+    --encriptarBackground: rgb(19,38,92);
+    --borderBoton: rgb(19,38,92);
+    --borderState: ridge;
+    --hooverColor: hwb(240 28% 45%);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.darkTheme{
+    background-color: #1b1b24;
+    color: white;
+    --textAreaColor: white;
+    --colorPlaceholder: white;
+    --backgroundTexto: #1b1b24;
+    --footerColor: white;
+    --backgroundMensajes: #1b1b24;
+    
+    --copiarDesencText: rgb(255, 255, 255);
+    --copiarDesencBackground: hsl(214, 5%, 25%);
+    --encriptarText: white;
+    --encriptarBackground: #3c3c68;
+    --borderState: hidden;
+    --hooverColor: hsl(240, 47%, 23%);
+    
 }
 
-body {
-    background-color: var(--color-secundario);
+body{
+    background-color: #E5E5E5;
+    font-family: 'inter';
+    transition: 1s;
 }
 
-.logo-alura {
-    margin-top: 3rem;
-    margin-bottom: 1rem;
-    margin-left: 3rem;
+header :focus{
+    outline-style: none;
 }
 
-.placeholder {
-    color: var(--color-primario);
-    font-family: var(--tipografia-font-family);
-    font-weight: 400;
+.logo{
+    
+    content: var(--logo);
+    width: 2.5rem;
+    height:auto;
+    margin-top: 40px;
+    margin-left: 40px;
+
+
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+}
+
+
+.conteiner{
+    width: 90%;
+    margin: auto;
+}
+
+.texto{
+    height: 50%;
+    margin: 2% auto 0;
+    display: inline-block;
     font-size: 32px;
+    color: var(--textAreaColor);
+    border: none;
+    background-color: var(--backgroundTexto) ;
+    resize: none;
+    transition: 1s;
 }
 
-.contenido__seccion__encriptador {
-    width: 36.063rem;
-    height: auto;
-    margin-top: 10.5rem;
-    margin-bottom: 45rem;
-    margin-left: 15rem;
-    padding: 1.563rem 1.563rem 1.875rem;
-    color: var(--color-primario);
-    background-color: var(--color-secundario);
+textarea:focus{
+    outline: none !important;
 }
 
-.contenido__seccion__texto {
+::placeholder{
+    color: var(--colorPlaceholder);
+    opacity: 0.5;
+}
+
+.mensajes{
+    float: right;
+    background-color: var(--backgroundMensajes);
+    
     text-align: center;
-    color: var(--color-primario);
-}
-
-.contenido {
-    display: flex;
-    justify-content: space-between;
-}
-
-.contenido__seccion__dessencriptadpor {
-    width: 25rem;
-    height: 59rem;
-    border-radius: 2rem;
-    margin-right: 1.875rem;
-    background: white;
-    color: var(--color-primario);
-    position: absolute;
-    left: 1000px;
-    top: 40px;
-    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.08);
-    border-radius: 32px;
-}
-
-.contenido__seccion__imagen {
-    width: 21rem;
-    height: 304px;
-    margin-top: 19rem;
-    overflow: hidden;
-}
-
-#inputText {
-    width: 100%;
-    min-height: 3.125rem;
-    margin-bottom: 0.625rem;
-    margin-top: 3rem;
-    padding: 0.625rem;
+    width: 35%;
+    height: 90%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
     box-sizing: border-box;
-    resize: none;
-    outline: none;
-    font-family: var(--tipografia-font-family);
-    font-weight: 400;
-    overflow: hidden;
-    color: var(--color-primario);
-    border: solid var(--color-primario);
-}
-
-#outputText {
-    position: relative;
-    width: 21.813rem;
-    height: auto;
-    top: 2.5rem;
-    left: 1.5rem;
-    color: var(--color-primario);
-    border: solid var(--color-primario);
-}
-
-p {
-    margin-top: 1rem;
-    margin-left: 18rem;
-    color: var(--color-terciario);
-}
-
-strong {
-    color: white;
-    background-color: var(--color-terciario);
-    padding: 2px 6px 2px 6px;
     border-radius: 32px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    transition: 1s;
 }
 
-.div__botones {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 1rem;
-    margin-bottom: 5rem;
-    margin-left: 18rem;
-    margin-right: 65rem;
-    gap: 1.5rem;
+.mensajes img{
+    width: 80%;
 }
 
-#encriptarBtn {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    border-radius: 1.5rem;
-    border: 0.063rem;
-    text-decoration: none;
-    color: white;
-    background-color: var(--color-primario);
+#imagenSinMensaje{
+    visibility: visible;
+
+    
+    -khtml-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
-#desencriptarBtn {
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    border-radius: 1.5rem;
-    border: solid 0.063rem var(--color-primario);
-    text-decoration: none;
-    background-color: var(--color-terciario);
+.mensajes h2{
+    font-size: 24px;
+    font-weight: bold;
 }
 
-#copiarBtn {
-    position: relative;
-    right: -400px;
-    border: solid 0.063rem var(--color-primario);
-    border-radius: 1.5rem;
-    width: 20.5rem;
-    height: 4.188rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
-    padding-left: 5rem;
-    padding-right: 5rem;
-    color: var(--color-primario);
-    background-color: white;
+.mensajes p{
+    margin: 2%;
+    font-size: 16px;
 }
 
-textarea {
-    box-sizing: border-box;
+#vacio{
+    padding: 30px 20px;
+}
+
+#resultado{
     width: 100%;
-    padding: 10px;
-    resize: none;
-    overflow: hidden;
-    min-height: 50px;
+    height: 90%;
+    font-size: 24px;
+    color: grey;
+    text-align: left;
+    visibility: visible;
+    background-color: var(--backgroundMensajes);
+    display: none;
 }
 
-.final-de-la-paguina {
-    display: flex;
-    align-items: center;
-    margin-bottom: 3rem;
+#sinMensaje{
+    visibility: visible;
 }
 
-.final-de-la-paguina__img {
-    position: relative;
-    left: 441px;
-    top: 9px;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    margin-bottom: 3rem;
+#descripcionSinMensaje{
+    visibility: visible;
 }
 
-.final-de-la-paguina__link {
-    position: relative;
-    left: 442px;
-    top: 9px;
-    margin-bottom: 3rem;
-    text-decoration: none;
-    color: var(--color-primario);
+.copiar{
+    margin: 2%;
+    width: 40%;
+    padding: 3% 0;
+    font-size: 16px;
+    border: var(--borderState);
+    color: var(--copiarDesencText);
+    background-color: var(--copiarDesencBackground);
+    border-radius: 15px;
+    border-width: thin;
+    border-color: var(--borderBoton);
+    transition: 1s all;
+    cursor: pointer;
+    display: none;
 }
 
-.parrafo__footer {
-    color: var(--color-primario);
+.botones{
+    display: block;
 }
 
-/* Media Queries */
+.botones p{
+    font-size: 12px;
+    color: gray;
+    margin-bottom: 1%;
+}
 
-/* Pantallas pequeñas (móviles) */
-@media screen and (max-width: 600px) {
-    .contenido{
+.encriptar{
+
+    margin: auto;
+    width: 20%;
+    padding: 1% 0;
+    font-size: 16px;
+    color: var(--encriptarText);
+    border: none;
+    background-color: var(--encriptarBackground);
+    border-radius: 15px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+
+.desencriptar{
+    margin-left: 2%;
+    width: 20%;
+    padding: 1% 0;
+    font-size: 16px;
+    border: var(--borderState);
+    color: var(--copiarDesencText);
+    background-color: var(--copiarDesencBackground);
+    border-width: thin;
+    border-color: var(--borderBoton);
+    border-radius: 15px;
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.encriptar:hover, .desencriptar:hover, .copiar:hover{
+    background-color: var(--hooverColor);
+}
+
+footer{
+    text-align: center;
+    margin: 1%;
+    color: var(--footerColor);
+    transition: 1s;
+}
+
+a{
+    color: var(--footerColor);
+    text-decoration-line: none;
+    transition: 1s;
+}
+
+#github:hover, #linkedin:hover{
+    text-decoration-line: underline;
+}
+
+
+@media screen and (max-width:600px){
+
+    .logo{
+        margin: 10% auto;
+    }
+
+    .astro{
+        margin: 20px 20px auto;
+    }
+
+    .texto,.botones{
         display: block;
+        width: 100%;
+        margin: 5% auto;
     }
-    .contenido__seccion__encriptador {
-        position: relative;
-        top: -171px;
-        left: -250px;
-        width: 523px;
 
+    #texto{
+        height: 5em;
     }
-    .contenido__seccion__dessencriptadpor {
-            position: relative;
-            top: -880px;
-            left: 28px;
-            width: 396px;
-            height: 273px;
+
+    #resultado{
+        height: 5em;
     }
-    .contenido__seccion__imagen {
+
+    .mensajes{
+        width: 100%;
+        float: none;
+        display: block;
+        margin: auto;
+    }
+
+    .vacio{
+        padding-top: 3em;
+        padding-bottom: 3em;
+    }
+
+    .encriptar,.desencriptar{
+        width: 45%;
+        margin: 2%;
+        padding: 2% 0;
+    }
+
+    .desencriptar:hover, .copiar:hover{
+        background-color: #D8DFE8;
+    }
+
+    .encriptar:hover{
+        background-color: darkblue;
+    }
+
+    #imagenSinMensaje{
         display: none;
     }
+}
 
-    #inputText,
-    #outputText {
-        width: 90%;
-        margin: 1rem auto;
-        padding: 1rem;
-        font-size: 1rem;
-    }
+@media (min-width: 601px) and (max-width:900px)
+{ main.conteiner 
+    { flex-direction: row; 
+        justify-content: space-between; 
+    } .texto 
+    { max-width: 400px; 
+    } .mensajes 
+    { max-width: 400px; 
+    } .botones 
+    { text-align: left; 
+    } 
+} 
 
-    .div__botones {
-        position: relative;
-        top: -913px;
-        left: -305px;
-    }
-    #encriptarBtn, 
-    #desencriptarBtn {
-        padding: 20px;
-        margin: 61px;
-    }
 
-    #copiarBtn {
-        position: relative;
-        right: 355px;
-        padding: 29px;
-        margin: 26px;
-        top: 129px;
+@keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-    p {
-        position: relative;
-        right: -34px;
-        top: -857px;
-        margin-left: 2px;
-        margin-right: 2px
-        
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
+  }
+  
+  
+  @keyframes moveIn {
+    from {
+      transform: translateX(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  
+  .fade-in {
+    animation: fadeIn 1s ease-out;
+  }
+  
+  
+  .move-in {
+    animation: moveIn 1s ease-out;
+  }
+  
 
-    .parrafo__footer {
-        position: relative;
-        top: -932px;
-    }
-    .final-de-la-paguina__img,
-    .final-de-la-paguina__link {
-        position: relative;
-        top: -910px;
-        left: 48px;
-    }
-    }
 
-        
-
-/* Pantallas medianas (tabletas) */
-@media (min-width: 601px) and (max-width: 1024px) {
-    .contenido{
-        display: block;
-    }
-    .contenido__seccion__encriptador {
-        position: relative;
-        top: -171px;
-        left: -250px;
-        width: 523px;
-
-    }
-    .contenido__seccion__dessencriptadpor {
-        position: relative;
-        top: -1045px;
-        left: 465px;
-        width: 396px;
-        height: 351px;
-    }
-    .contenido__seccion__imagen {
-        display: none;
-    }
-
-    #inputText,
-    #outputText {
-        width: 90%;
-        margin: 1rem auto;
-        padding: 1rem;
-        font-size: 1rem;
-    }
-
-    .div__botones {
-        position: relative;
-        top: -913px;
-        left: -305px;
-    }
-    #encriptarBtn, 
-    #desencriptarBtn {
-        position: relative;
-        top: 1px;
-        left: 77px;
-        padding: 20px;
-        margin: 61px;
-    }
-
-    #copiarBtn {
-        position: relative;
-        right: -126px;
-        padding: 29px;
-        margin: 26px;
-        top: 32px;
-    }
-    p {
-        position: relative;
-        right: -34px;
-        top: -857px;
-        margin-left: 2px;
-        margin-right: 2px
-        
-    }
-
-    .parrafo__footer {
-        position: relative;
-        top: -932px;
-        left: 131px;
-    }
-    .final-de-la-paguina__img,
-    .final-de-la-paguina__link {
-        position: relative;
-        top: -910px;
-        left: 236px;
-    }
-    }

@@ -1,44 +1,61 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css">
-  <title>Encriptador de texto</title>
-</head>
-<body>
-  <header class="cabecera-del-contenido"></header>
-  
-  <img class="logo-alura" src="img/alura.svg" width="40px" height="40px" alt="logo">
-  
-  <main class="contenido">
-    
-    <section class="contenido__seccion__encriptador">
-      <h2 class="contenido__seccion__texto">Introduce tu texto aquí...</h2>
-      <textarea id="inputText" placeholder="Introduce tu texto aquí..." required ></textarea>
-    </section>
-    
-    <section class="contenido__seccion__dessencriptadpor">
-      <img class="contenido__seccion__imagen" src="img/persona.png" alt="persona">
-      <textarea id="outputText" readonly></textarea>
-    </section>
-  </main>
-  <p> <strong>!</strong> Solo letras minúsculas, sin acentos, puntos ni caracteres especiales</p>
-  <div class="div__botones">
-    <a id="encriptarBtn" href="#">Encriptar</a>
-    <a id="desencriptarBtn" href="#">Desencriptar</a>
-    <button id="copiarBtn">Copiar</button>
-  </div>
-  
-  <p class="parrafo__footer">Realizado por Thonny Cardenas - Challenge: Encriptador - Programa Oracle, Next Education</p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>Encriptador de texto</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/alura.svg" type="image/icon type">
 
-  <footer class="final-de-la-paguina">
-    <img class="final-de-la-paguina__img" src="img/git.png" width="40px" height="40px" alt="logo-github">
-   <a class="final-de-la-paguina__link" href="https://github.com/thonny9373/Encriptado-de-texto" target="_blank">Thonny9373</a>
-    <img class="final-de-la-paguina__img" src="img/linkedin-logo-linkedin-logo-transparent-linkedin-icon-transparent-free-free-png.webp" width="40px" height="40px" alt="logo-likedin">
-   <a class="final-de-la-paguina__link" href="https://www.linkedin.com/feed/?trk=sem-ga_campid.18146679037_asid.140850334975_crid.694860685343_kw.linkedin_d.c_tid.kwd-148086543_n.g_mt.e_geo.9047056" target="_blank">Thonny Cardenas</a>
-  </footer>
-  
-  <script src="main.js"></script>
-</body>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+
+    </head>
+
+    <body>
+        <header>
+            <div>
+                <img class="logo" src="img/alura.svg" alt="Logo de Encriptador Alura" width="40px" height="40px">
+            </div>
+        </header>
+
+        <main class="conteiner">
+            <textarea name="text" id="texto" class="texto" cols="35" rows="10" placeholder="Ingrese el texto aquí"></textarea>
+
+            <div class="mensajes" id="mensajes">
+
+                <section class="vacio" id="vacio">
+                    <h1><img src="img/persona.png" alt="Imágen de mensaje no encontrado" id="imagenSinMensaje"></h1>
+                    <h2 id="sinMensaje">Ningún mensaje fue encontrado</h2>
+                    <p id="descpripcionSinMensaje">Ingresa el texto que desea encriptar o desencriptar</p>
+                </section>
+                
+                <section>
+                    <textarea name="text" id="resultado" class="texto" cols="50" rows="12"></textarea>
+                    <input type="submit" value="Copiar" class="copiar" id="copiar">
+                </section>
+                
+            </div>
+
+            <section class="botones">
+
+                <p><span class="iconify" data-icon="bi:exclamation-circle-fill"></span> Solo letras minúsculas y sin acento</p>
+                <input type="submit" value="Encriptar" class="encriptar" id="encriptar">
+                <input type="submit" value="Desencriptar" class="desencriptar" id="desencriptar">
+
+            </section>
+            
+
+        </main>
+
+        <footer>
+            <p>Realizado por Thonny Cardenas - Challenge: Encriptador - Programa Oracle, Next Education</p> 
+            <p><span class="iconify" data-icon="akar-icons:github-fill"></span> <a id="github" href="https://github.com/thonny9373/Encriptado-de-texto" target="_blank">Thonny9373</a> - <span class="iconify" data-icon="akar-icons:linkedin-box-fill"></span> <a id="linkedin" href="https://www.linkedin.com/feed/" target="_blank">Thonny Cardenas</a></p>
+        </footer>
+
+    </body>
+
+    <script src="main.js"></script>
+    <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
 </html>
